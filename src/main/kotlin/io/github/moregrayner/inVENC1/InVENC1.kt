@@ -40,15 +40,6 @@ class InVENC(private val title: String, private val size: Int) : Listener {
         itemActions[slot] = block
     }
 
-    fun onScroll(scroller: Int, block: () -> Unit) {
-        scrollActions.add {
-            val stack = 0
-            if (stack == scroller) {
-                block()
-            }
-        }
-    }
-
     fun openInventory(player: Player) {
         val inventory: Inventory = Bukkit.createInventory(null, size, title)
 
